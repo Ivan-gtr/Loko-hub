@@ -1,0 +1,1032 @@
+<div class="app">
+
+    <!-- ================= ШАПКА ================= -->
+
+    <header class="app-header">
+        <div class="brand">
+            <img
+                class="logo-image"
+                src="https://i.postimg.cc/rmrPxS0v/af23b427-2af2-420a-b118-d2c9b622603d.png"
+                alt="LOKO HUB"
+            >
+        </div>
+
+        <div class="header-status">
+            <span class="status-dot"></span>
+            <span>ФАНАТСКОЕ ПРИЛОЖЕНИЕ</span>
+        </div>
+    </header>
+
+
+    <!-- ================= ОСНОВНОЕ СОДЕРЖИМОЕ ================= -->
+
+    <main class="app-content">
+
+        <!-- ================= ГЛАВНАЯ ================= -->
+
+        <section class="screen active" id="homeScreen">
+
+            <div class="welcome-block">
+                <span class="section-label">
+                    ДОБРО ПОЖАЛОВАТЬ
+                </span>
+
+                <h1>
+                    ВСЕГДА<br>
+                    <span>ЗА ЛОКО</span>
+                </h1>
+
+                <p>
+                    Всё о московском «Локомотиве»
+                    в одном приложении.
+                </p>
+            </div>
+
+
+            <!-- Ближайший матч -->
+
+            <div class="home-match-card">
+
+                <div class="card-top">
+                    <span>БЛИЖАЙШИЙ МАТЧ</span>
+                    <span class="match-status">ПРЕДСТОИТ</span>
+                </div>
+
+                <div class="match-teams">
+
+                    <div class="club">
+                        <div class="club-logo red-logo">
+                            Л
+                        </div>
+
+                        <strong>Локомотив</strong>
+                        <span>Москва</span>
+                    </div>
+
+                    <div class="match-info">
+                        <strong>— : —</strong>
+                        <span>Дата матча</span>
+                    </div>
+
+                    <div class="club">
+                        <div class="club-logo opponent-logo">
+                            ?
+                        </div>
+
+                        <strong>Соперник</strong>
+                        <span>Команда</span>
+                    </div>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    data-open-screen="matchesScreen"
+                    type="button"
+                >
+                    Смотреть матчи
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <!-- Быстрые разделы -->
+
+            <div class="home-section-title">
+                <div>
+                    <span class="section-label">
+                        САМОЕ ВАЖНОЕ
+                    </span>
+
+                    <h2>
+                        Сейчас в LOKO HUB
+                    </h2>
+                </div>
+            </div>
+
+
+            <div class="home-news-preview">
+
+                <article
+                    class="mini-news"
+                    data-open-screen="newsScreen"
+                    tabindex="0"
+                    role="button"
+                >
+                    <div class="mini-news-icon">
+                        📰
+                    </div>
+
+                    <div>
+                        <span>НОВОСТИ</span>
+
+                        <h3>
+                            Последние новости клуба
+                        </h3>
+
+                        <p>
+                            Все события из мира «Локомотива»
+                        </p>
+                    </div>
+
+                    <span class="arrow">
+                        ↗
+                    </span>
+                </article>
+
+
+                <article
+                    class="mini-news"
+                    data-open-screen="matchesScreen"
+                    tabindex="0"
+                    role="button"
+                >
+                    <div class="mini-news-icon">
+                        ⚽
+                    </div>
+
+                    <div>
+                        <span>МАТЧИ</span>
+
+                        <h3>
+                            Матчи онлайн и расписание
+                        </h3>
+
+                        <p>
+                            Счёт, события и результаты
+                        </p>
+                    </div>
+
+                    <span class="arrow">
+                        ↗
+                    </span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= МАТЧИ ================= -->
+
+        <section class="screen" id="matchesScreen">
+
+            <div class="screen-heading">
+                <span class="section-label">
+                    ФУТБОЛ
+                </span>
+
+                <h1>
+                    Матчи
+                </h1>
+
+                <p>
+                    Онлайн, расписание и завершённые игры.
+                </p>
+            </div>
+
+
+            <!-- Онлайн-статус -->
+
+            <div class="live-banner">
+
+                <div class="live-title">
+                    <span class="live-dot"></span>
+
+                    <strong>
+                        МАТЧИ ОНЛАЙН
+                    </strong>
+                </div>
+
+                <p>
+                    Сейчас матчей в прямом эфире нет.
+                </p>
+
+            </div>
+
+
+            <!-- Ближайшая игра -->
+
+            <div class="content-card">
+
+                <div class="card-top">
+                    <span>
+                        БЛИЖАЙШАЯ ИГРА
+                    </span>
+
+                    <span>
+                        19:30
+                    </span>
+                </div>
+
+
+                <div
+                    class="big-match match-open-trigger"
+                    data-match="next"
+                    role="button"
+                    tabindex="0"
+                >
+
+                    <div class="club">
+                        <div class="club-logo red-logo">
+                            Л
+                        </div>
+
+                        <strong>
+                            Локомотив
+                        </strong>
+
+                        <span>
+                            Москва
+                        </span>
+                    </div>
+
+
+                    <div class="match-info">
+                        <strong>
+                            — : —
+                        </strong>
+
+                        <span>
+                            15 сентября
+                        </span>
+                    </div>
+
+
+                    <div class="club">
+                        <div class="club-logo opponent-logo">
+                            ?
+                        </div>
+
+                        <strong>
+                            Соперник
+                        </strong>
+
+                        <span>
+                            Команда
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="secondary-button"
+                    id="matchCenterButton"
+                    type="button"
+                >
+                    Открыть матч-центр
+                </button>
+
+            </div>
+
+
+            <!-- Последние матчи -->
+
+            <div class="content-card">
+
+                <div class="card-top">
+                    <span>
+                        ПОСЛЕДНИЕ МАТЧИ
+                    </span>
+                </div>
+
+                <div class="empty-state">
+                    <span>
+                        ⚽
+                    </span>
+
+                    <h3>
+                        Результаты появятся здесь
+                    </h3>
+
+                    <p>
+                        Позже подключим реальные данные матчей.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ПОДРОБНЫЙ МАТЧ ================= -->
+
+        <section class="screen" id="matchDetailScreen">
+
+            <button
+                class="back-button"
+                id="backToMatches"
+                type="button"
+            >
+                ← Назад к матчам
+            </button>
+
+
+            <div class="screen-heading match-detail-heading">
+
+                <span class="section-label">
+                    МАТЧ-ЦЕНТР
+                </span>
+
+                <h1>
+                    Локомотив — Соперник
+                </h1>
+
+                <p>
+                    Подробная информация о матче.
+                </p>
+
+            </div>
+
+
+            <!-- Основная информация -->
+
+            <div class="content-card match-detail-card">
+
+                <div class="card-top">
+                    <span>
+                        ПРЕДСТОЯЩИЙ МАТЧ
+                    </span>
+
+                    <span class="match-status">
+                        СКОРО
+                    </span>
+                </div>
+
+
+                <div class="detail-date">
+                    <strong>
+                        15 сентября 2026
+                    </strong>
+
+                    <span>
+                        19:30
+                    </span>
+                </div>
+
+
+                <div class="detail-teams">
+
+                    <div class="club">
+                        <div class="club-logo red-logo">
+                            Л
+                        </div>
+
+                        <strong>
+                            Локомотив
+                        </strong>
+
+                        <span>
+                            Москва
+                        </span>
+                    </div>
+
+
+                    <div class="detail-score">
+                        <strong>
+                            — : —
+                        </strong>
+
+                        <span>
+                            До начала
+                        </span>
+                    </div>
+
+
+                    <div class="club">
+                        <div class="club-logo opponent-logo">
+                            ?
+                        </div>
+
+                        <strong>
+                            Соперник
+                        </strong>
+
+                        <span>
+                            Команда
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="detail-info">
+
+                    <div>
+                        <span>
+                            СТАДИОН
+                        </span>
+
+                        <strong>
+                            РЖД Арена
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span>
+                            ТУРНИР
+                        </span>
+
+                        <strong>
+                            Российская Премьер-лига
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span>
+                            СТАТУС
+                        </span>
+
+                        <strong>
+                            Матч ещё не начался
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- События матча -->
+
+            <div class="content-card events-card">
+
+                <div class="card-top">
+                    <span>
+                        СОБЫТИЯ МАТЧА
+                    </span>
+
+                    <span>
+                        0 событий
+                    </span>
+                </div>
+
+
+                <div class="empty-state">
+
+                    <span>
+                        ⚽
+                    </span>
+
+                    <h3>
+                        Матч ещё не начался
+                    </h3>
+
+                    <p>
+                        Во время игры здесь появятся голы,
+                        карточки, замены и другие события.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Статистика -->
+
+            <div class="content-card">
+
+                <div class="card-top">
+                    <span>
+                        СТАТИСТИКА
+                    </span>
+
+                    <span>
+                        СКОРО
+                    </span>
+                </div>
+
+
+                <div class="empty-state">
+
+                    <span>
+                        📊
+                    </span>
+
+                    <h3>
+                        Статистика пока недоступна
+                    </h3>
+
+                    <p>
+                        Позже добавим владение мячом,
+                        удары, угловые и другие показатели.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= НОВОСТИ ================= -->
+
+        <section class="screen" id="newsScreen">
+
+            <div class="screen-heading">
+
+                <span class="section-label">
+                    МИР ЛОКО
+                </span>
+
+                <h1>
+                    Новости
+                </h1>
+
+                <p>
+                    Главные события клуба и команды.
+                </p>
+
+            </div>
+
+
+            <div class="news-list">
+
+                <article class="news-card">
+
+                    <div class="news-card-image">
+                        📰
+                    </div>
+
+                    <div class="news-card-content">
+
+                        <span class="news-category">
+                            КОМАНДА
+                        </span>
+
+                        <span class="news-date">
+                            Сегодня • 12:40
+                        </span>
+
+                        <h2>
+                            Команда готовится к следующему матчу
+                        </h2>
+
+                        <p>
+                            Последние новости с тренировочной базы
+                            московского «Локомотива».
+                        </p>
+
+                        <button
+                            class="text-button news-read-button"
+                            type="button"
+                        >
+                            Читать далее →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="news-card">
+
+                    <div class="news-card-image">
+                        🏟️
+                    </div>
+
+                    <div class="news-card-content">
+
+                        <span class="news-category">
+                            КЛУБ
+                        </span>
+
+                        <span class="news-date">
+                            Вчера • 18:20
+                        </span>
+
+                        <h2>
+                            Всё о жизни клуба и стадиона
+                        </h2>
+
+                        <p>
+                            Новости, события и важные изменения
+                            в жизни «Локомотива».
+                        </p>
+
+                        <button
+                            class="text-button news-read-button"
+                            type="button"
+                        >
+                            Читать далее →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="news-card">
+
+                    <div class="news-card-image">
+                        🔥
+                    </div>
+
+                    <div class="news-card-content">
+
+                        <span class="news-category">
+                            БОЛЕЛЬЩИКИ
+                        </span>
+
+                        <span class="news-date">
+                            Вчера • 15:00
+                        </span>
+
+                        <h2>
+                            Болельщики снова с командой
+                        </h2>
+
+                        <p>
+                            Красно-зелёная поддержка на трибунах
+                            и за пределами стадиона.
+                        </p>
+
+                        <button
+                            class="text-button news-read-button"
+                            type="button"
+                        >
+                            Читать далее →
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= СОСТАВ ================= -->
+
+        <section class="screen" id="squadScreen">
+
+            <div class="screen-heading">
+
+                <span class="section-label">
+                    КОМАНДА
+                </span>
+
+                <h1>
+                    Состав
+                </h1>
+
+                <p>
+                    Игроки и тренерский штаб.
+                </p>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="card-top">
+                    <span>
+                        ОСНОВНОЙ СОСТАВ
+                    </span>
+                </div>
+
+
+                <div class="players-list">
+
+                    <div class="player-row">
+
+                        <div class="player-number">
+                            01
+                        </div>
+
+                        <div>
+                            <strong>
+                                Вратарь
+                            </strong>
+
+                            <span>
+                                Игрок появится позже
+                            </span>
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <div class="player-row">
+
+                        <div class="player-number">
+                            02
+                        </div>
+
+                        <div>
+                            <strong>
+                                Защитник
+                            </strong>
+
+                            <span>
+                                Игрок появится позже
+                            </span>
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <div class="player-row">
+
+                        <div class="player-number">
+                            03
+                        </div>
+
+                        <div>
+                            <strong>
+                                Полузащитник
+                            </strong>
+
+                            <span>
+                                Игрок появится позже
+                            </span>
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <div class="player-row">
+
+                        <div class="player-number">
+                            04
+                        </div>
+
+                        <div>
+                            <strong>
+                                Нападающий
+                            </strong>
+
+                            <span>
+                                Игрок появится позже
+                            </span>
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="card-top">
+                    <span>
+                        ТРЕНЕРСКИЙ ШТАБ
+                    </span>
+                </div>
+
+
+                <div class="empty-state">
+
+                    <span>
+                        👔
+                    </span>
+
+                    <h3>
+                        Раздел в разработке
+                    </h3>
+
+                    <p>
+                        Позже добавим реальные карточки
+                        игроков и тренеров.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= БОЛЕЛЬЩИКИ ================= -->
+
+        <section class="screen" id="fansScreen">
+
+            <div class="screen-heading">
+
+                <span class="section-label">
+                    КРАСНО-ЗЕЛЁНЫЕ
+                </span>
+
+                <h1>
+                    Болельщики
+                </h1>
+
+                <p>
+                    Голосования, общение и фанатская жизнь.
+                </p>
+
+            </div>
+
+
+            <div class="fan-hero">
+
+                <span>
+                    🔥
+                </span>
+
+                <h2>
+                    Одна команда.<br>
+                    Одна семья.
+                </h2>
+
+                <p>
+                    Здесь живёт настоящий красно-зелёный дух.
+                </p>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="card-top">
+
+                    <span>
+                        ГОЛОСОВАНИЕ
+                    </span>
+
+                    <span>
+                        СКОРО
+                    </span>
+
+                </div>
+
+
+                <h2>
+                    Кто лучший игрок матча?
+                </h2>
+
+                <p class="muted">
+                    После подключения матч-центра здесь появятся
+                    настоящие голосования.
+                </p>
+
+                <button
+                    class="secondary-button"
+                    id="voteButton"
+                    type="button"
+                >
+                    Открыть голосование
+                </button>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="card-top">
+                    <span>
+                        ФАНАТСКОЕ СООБЩЕСТВО
+                    </span>
+                </div>
+
+
+                <div class="empty-state">
+
+                    <span>
+                        🟢
+                    </span>
+
+                    <h3>
+                        Общение болельщиков
+                    </h3>
+
+                    <p>
+                        Позже добавим обсуждения
+                        и фанатские активности.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= НИЖНЯЯ НАВИГАЦИЯ ================= -->
+
+    <nav class="bottom-navigation">
+
+        <button
+            class="nav-item active"
+            data-screen="homeScreen"
+            type="button"
+        >
+            <span class="nav-icon">
+                ⌂
+            </span>
+
+            <span>
+                Главная
+            </span>
+        </button>
+
+
+        <button
+            class="nav-item"
+            data-screen="matchesScreen"
+            type="button"
+        >
+            <span class="nav-icon">
+                ⚽
+            </span>
+
+            <span>
+                Матчи
+            </span>
+        </button>
+
+
+        <button
+            class="nav-item"
+            data-screen="newsScreen"
+            type="button"
+        >
+            <span class="nav-icon">
+                📰
+            </span>
+
+            <span>
+                Новости
+            </span>
+        </button>
+
+
+        <button
+            class="nav-item"
+            data-screen="squadScreen"
+            type="button"
+        >
+            <span class="nav-icon">
+                👥
+            </span>
+
+            <span>
+                Состав
+            </span>
+        </button>
+
+
+        <button
+            class="nav-item"
+            data-screen="fansScreen"
+            type="button"
+        >
+            <span class="nav-icon">
+                🔥
+            </span>
+
+            <span>
+                Фанаты
+            </span>
+        </button>
+
+    </nav>
+
+</div>
+
+
+<!-- ================= УВЕДОМЛЕНИЕ ================= -->
+
+<div
+    class="notification"
+    id="notification"
+    role="status"
+    aria-live="polite"
+>
+
+    <span id="notificationText"></span>
+
+    <button
+        id="closeNotification"
+        type="button"
+        aria-label="Закрыть уведомление"
+    >
+        ×
+    </button>
+
+</div>
