@@ -1,7 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LOKO HUB</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
 <div class="app">
 
-    <!-- ================= ШАПКА ================= -->
-
+    <!-- ШАПКА -->
     <header class="app-header">
         <div class="brand">
             <img
@@ -18,12 +30,10 @@
     </header>
 
 
-    <!-- ================= ОСНОВНОЕ СОДЕРЖИМОЕ ================= -->
-
+    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
     <main class="app-content">
 
-        <!-- ================= ГЛАВНАЯ ================= -->
-
+        <!-- ГЛАВНАЯ -->
         <section class="screen active" id="homeScreen">
 
             <div class="welcome-block">
@@ -42,8 +52,6 @@
                 </p>
             </div>
 
-
-            <!-- Ближайший матч -->
 
             <div class="home-match-card">
 
@@ -90,8 +98,6 @@
 
             </div>
 
-
-            <!-- Быстрые разделы -->
 
             <div class="home-section-title">
                 <div>
@@ -168,8 +174,7 @@
         </section>
 
 
-        <!-- ================= МАТЧИ ================= -->
-
+        <!-- МАТЧИ -->
         <section class="screen" id="matchesScreen">
 
             <div class="screen-heading">
@@ -187,8 +192,6 @@
             </div>
 
 
-            <!-- Онлайн-статус -->
-
             <div class="live-banner">
 
                 <div class="live-title">
@@ -205,8 +208,6 @@
 
             </div>
 
-
-            <!-- Ближайшая игра -->
 
             <div class="content-card">
 
@@ -282,8 +283,6 @@
             </div>
 
 
-            <!-- Последние матчи -->
-
             <div class="content-card">
 
                 <div class="card-top">
@@ -311,8 +310,7 @@
         </section>
 
 
-        <!-- ================= ПОДРОБНЫЙ МАТЧ ================= -->
-
+        <!-- ДЕТАЛИ МАТЧА -->
         <section class="screen" id="matchDetailScreen">
 
             <button
@@ -340,8 +338,6 @@
 
             </div>
 
-
-            <!-- Основная информация -->
 
             <div class="content-card match-detail-card">
 
@@ -451,8 +447,6 @@
             </div>
 
 
-            <!-- События матча -->
-
             <div class="content-card events-card">
 
                 <div class="card-top">
@@ -485,8 +479,6 @@
 
             </div>
 
-
-            <!-- Статистика -->
 
             <div class="content-card">
 
@@ -523,8 +515,7 @@
         </section>
 
 
-        <!-- ================= НОВОСТИ ================= -->
-
+        <!-- НОВОСТИ -->
         <section class="screen" id="newsScreen">
 
             <div class="screen-heading">
@@ -661,8 +652,7 @@
         </section>
 
 
-        <!-- ================= СОСТАВ ================= -->
-
+        <!-- СОСТАВ -->
         <section class="screen" id="squadScreen">
 
             <div class="screen-heading">
@@ -820,8 +810,7 @@
         </section>
 
 
-        <!-- ================= БОЛЕЛЬЩИКИ ================= -->
-
+        <!-- БОЛЕЛЬЩИКИ -->
         <section class="screen" id="fansScreen">
 
             <div class="screen-heading">
@@ -927,8 +916,7 @@
     </main>
 
 
-    <!-- ================= НИЖНЯЯ НАВИГАЦИЯ ================= -->
-
+    <!-- НИЖНЯЯ НАВИГАЦИЯ -->
     <nav class="bottom-navigation">
 
         <button
@@ -1010,15 +998,13 @@
 </div>
 
 
-<!-- ================= УВЕДОМЛЕНИЕ ================= -->
-
+<!-- УВЕДОМЛЕНИЕ -->
 <div
     class="notification"
     id="notification"
     role="status"
     aria-live="polite"
 >
-
     <span id="notificationText"></span>
 
     <button
@@ -1028,5 +1014,10 @@
     >
         ×
     </button>
-
 </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
