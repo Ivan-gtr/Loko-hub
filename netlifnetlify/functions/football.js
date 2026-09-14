@@ -4,6 +4,9 @@ exports.handler = async function () {
     if (!API_KEY) {
         return {
             statusCode: 500,
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({
                 error: "API key is not configured"
             })
@@ -12,7 +15,7 @@ exports.handler = async function () {
 
     try {
         const response = await fetch(
-            "https://v3.football.api-sports.io/fixtures?team=1353&next=10",
+            "https://v3.football.api-sports.io/fixtures?team=1353&date=2026-09-16",
             {
                 method: "GET",
                 headers: {
@@ -26,15 +29,20 @@ exports.handler = async function () {
         return {
             statusCode: response.status,
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Cache-Control": "public, max-age=60"
             },
             body: JSON.stringify(data)
         };
     } catch (error) {
         return {
             statusCode: 500,
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({
-                error: "Failed to fetch football data"
+                error: "Failed to fetch football data",
+                details: error.message
             })
         };
     }
