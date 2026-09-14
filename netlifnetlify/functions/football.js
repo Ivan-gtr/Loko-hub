@@ -34,6 +34,7 @@ exports.handler = async function () {
             },
             body: JSON.stringify(data)
         };
+
     } catch (error) {
         return {
             statusCode: 500,
