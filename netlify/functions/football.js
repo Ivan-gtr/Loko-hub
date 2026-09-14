@@ -9,22 +9,21 @@ exports.handler = async function () {
             },
             body: JSON.stringify({
                 success: false,
-                error: "HIGHLIGHTLY_API_KEY is not configured",
-                message: "Проверь переменную HIGHLIGHTLY_API_KEY в Netlify"
+                error: "HIGHLIGHTLY_API_KEY is not configured"
             })
         };
     }
 
     const API_URL =
-        "https://soccer-highlights-api.p.rapidapi.com/fixtures" +
-        "?date=2026-09-15";
+        "https://soccer.highlightly.net/football/matches" +
+        "?date=2026-09-15" +
+        "&limit=100";
 
     try {
         const response = await fetch(API_URL, {
             method: "GET",
             headers: {
                 "x-rapidapi-key": API_KEY,
-                "x-rapidapi-host": "soccer-highlights-api.p.rapidapi.com",
                 "Accept": "application/json"
             }
         });
