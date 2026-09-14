@@ -15,7 +15,7 @@ exports.handler = async function () {
 
     try {
         const response = await fetch(
-            "https://v3.football.api-sports.io/fixtures?team=1353&date=2026-09-16",
+            "https://v3.football.api-sports.io/fixtures?team=1353&date=2026-09-15",
             {
                 method: "GET",
                 headers: {
