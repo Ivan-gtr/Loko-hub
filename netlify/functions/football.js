@@ -15,9 +15,9 @@ exports.handler = async function () {
     }
 
     const API_URL =
-        "https://soccer.highlightly.net/football/matches" +
+        "https://soccer.highlightly.net/matches" +
         "?date=2026-09-15" +
-        "&limit=100";
+        "&timezone=Europe/Moscow";
 
     try {
         const response = await fetch(API_URL, {
