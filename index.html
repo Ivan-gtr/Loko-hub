@@ -18,6 +18,7 @@
         <div class="brand">
             <img
                 class="logo-image"
+                id="brandLogo"
                 src="https://i.postimg.cc/rmrPxS0v/af23b427-2af2-420a-b118-d2c9b622603d.png"
                 alt="LOKO HUB"
             >
@@ -112,7 +113,7 @@
 
                 <article
                     class="mini-news"
-                    data-open-screen="newsScreen"
+                    data-open-screen="mediaScreen"
                     tabindex="0"
                     role="button"
                 >
@@ -165,6 +166,69 @@
                     </span>
                 </article>
 
+
+                <article class="mini-news media-preview-card" data-open-screen="mediaScreen" tabindex="0" role="button">
+                    <div class="mini-news-icon">🎙</div>
+
+                    <div>
+                        <span>LOKO MEDIA</span>
+
+                        <h3>Подкасты и авторские проекты</h3>
+
+                        <p>Материалы фанатских сообществ и авторов</p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </article>
+
+            </div>
+
+
+            <a class="home-media-cta" href="#mediaScreen" data-open-screen="mediaScreen">
+                <span class="home-media-cta-icon">✦</span>
+                <span>
+                    <strong>Открыть LOKO MEDIA</strong>
+                    <small>Новости, видео, подкасты, стримы и проекты</small>
+                </span>
+                <span class="arrow">→</span>
+            </a>
+
+
+            <div class="home-dashboard-grid">
+
+                <article class="home-poll-card">
+                    <div class="card-top">
+                        <span>ОПРОС ДНЯ</span>
+                        <span id="homePollStatus">ЗАГРУЗКА</span>
+                    </div>
+
+                    <div id="homePollContainer">
+                        <h2>Загружаем опрос…</h2>
+                    </div>
+                </article>
+
+                <article class="home-last-match-card">
+                    <div class="card-top">
+                        <span>ПОСЛЕДНИЙ МАТЧ</span>
+                        <span id="homeLastMatchStatus">НЕТ ДАННЫХ</span>
+                    </div>
+
+                    <div class="last-match-summary">
+                        <div class="last-match-team">
+                            <div class="club-logo red-logo" id="homeLastHomeLogo">Л</div>
+                            <strong id="homeLastHomeName">Локомотив</strong>
+                        </div>
+                        <strong class="last-match-score" id="homeLastMatchScore">— : —</strong>
+                        <div class="last-match-team">
+                            <div class="club-logo opponent-logo" id="homeLastAwayLogo">?</div>
+                            <strong id="homeLastAwayName">Соперник</strong>
+                        </div>
+                    </div>
+
+                    <p id="homeLastMatchMeta">Результат появится после загрузки данных.</p>
+                    <button class="text-button" id="homeLastMatchButton" type="button" disabled>Открыть матч →</button>
+                </article>
+
             </div>
 
         </section>
@@ -199,6 +263,8 @@
                 </div>
 
                 <p id="liveBannerMessage">Проверяем матчи в прямом эфире…</p>
+
+                <p class="data-freshness" id="matchesFreshness" hidden></p>
 
             </div>
 
@@ -483,138 +549,66 @@
         </section>
 
 
-        <!-- НОВОСТИ -->
-        <section class="screen" id="newsScreen">
+        <!-- LOKO MEDIA -->
+        <section class="screen" id="mediaScreen">
 
             <div class="screen-heading">
 
                 <span class="section-label">
-                    МИР ЛОКО
+                    LOKO MEDIA
                 </span>
 
                 <h1>
-                    Новости
+                    LOKO MEDIA
                 </h1>
 
                 <p>
-                    Главные события клуба и команды.
+                    Новости, видео, подкасты, стримы и авторские проекты клуба и болельщиков.
                 </p>
 
             </div>
 
 
-            <div class="news-list">
+            <div class="media-categories" role="group" aria-label="Категории LOKO MEDIA">
 
-                <article class="news-card">
+                <button class="media-category active" type="button" data-media-filter="all" aria-pressed="true">
+                    Все
+                </button>
 
-                    <div class="news-card-image">
-                        📰
-                    </div>
+                <button class="media-category" type="button" data-media-filter="news" aria-pressed="false">
+                    Новости
+                </button>
 
-                    <div class="news-card-content">
+                <button class="media-category" type="button" data-media-filter="video" aria-pressed="false">
+                    Видео
+                </button>
 
-                        <span class="news-category">
-                            КОМАНДА
-                        </span>
+                <button class="media-category" type="button" data-media-filter="podcast" aria-pressed="false">
+                    Подкасты
+                </button>
 
-                        <span class="news-date">
-                            Сегодня • 12:40
-                        </span>
+                <button class="media-category" type="button" data-media-filter="stream" aria-pressed="false">
+                    Стримы
+                </button>
 
-                        <h2>
-                            Команда готовится к следующему матчу
-                        </h2>
+                <button class="media-category" type="button" data-media-filter="project" aria-pressed="false">
+                    Проекты
+                </button>
 
-                        <p>
-                            Последние новости с тренировочной базы
-                            московского «Локомотива».
-                        </p>
-
-                        <button
-                            class="text-button news-read-button"
-                            type="button"
-                        >
-                            Читать далее →
-                        </button>
-
-                    </div>
-
-                </article>
+            </div>
 
 
-                <article class="news-card">
-
-                    <div class="news-card-image">
-                        🏟️
-                    </div>
-
-                    <div class="news-card-content">
-
-                        <span class="news-category">
-                            КЛУБ
-                        </span>
-
-                        <span class="news-date">
-                            Вчера • 18:20
-                        </span>
-
-                        <h2>
-                            Всё о жизни клуба и стадиона
-                        </h2>
-
-                        <p>
-                            Новости, события и важные изменения
-                            в жизни «Локомотива».
-                        </p>
-
-                        <button
-                            class="text-button news-read-button"
-                            type="button"
-                        >
-                            Читать далее →
-                        </button>
-
-                    </div>
-
-                </article>
+            <div class="media-placeholder-note" role="status" id="mediaStatusNote">
+                Загружаем материалы LOKO MEDIA…
+            </div>
 
 
-                <article class="news-card">
+            <div class="news-list" id="mediaList"></div>
 
-                    <div class="news-card-image">
-                        🔥
-                    </div>
 
-                    <div class="news-card-content">
-
-                        <span class="news-category">
-                            БОЛЕЛЬЩИКИ
-                        </span>
-
-                        <span class="news-date">
-                            Вчера • 15:00
-                        </span>
-
-                        <h2>
-                            Болельщики снова с командой
-                        </h2>
-
-                        <p>
-                            Красно-зелёная поддержка на трибунах
-                            и за пределами стадиона.
-                        </p>
-
-                        <button
-                            class="text-button news-read-button"
-                            type="button"
-                        >
-                            Читать далее →
-                        </button>
-
-                    </div>
-
-                </article>
-
+            <div id="mediaEmptyState" class="media-empty-state" role="status" hidden>
+                В этой категории пока нет подключённых материалов. Материалы появятся
+                после согласования источников — следите за обновлениями.
             </div>
 
         </section>
@@ -634,143 +628,85 @@
                 </h1>
 
                 <p>
-                    Игроки и тренерский штаб.
+                    Основная команда · сезон 2026/27
                 </p>
 
             </div>
 
-
-            <div class="content-card">
-
-                <div class="card-top">
-                    <span>
-                        ОСНОВНОЙ СОСТАВ
-                    </span>
+            <div class="squad-summary" aria-live="polite">
+                <div>
+                    <strong id="squadPlayerCount">—</strong>
+                    <span>игроков загружено</span>
                 </div>
 
-
-                <div class="players-list">
-
-                    <div class="player-row">
-
-                        <div class="player-number">
-                            01
-                        </div>
-
-                        <div>
-                            <strong>
-                                Вратарь
-                            </strong>
-
-                            <span>
-                                Игрок появится позже
-                            </span>
-                        </div>
-
-                        <span>
-                            →
-                        </span>
-
-                    </div>
-
-
-                    <div class="player-row">
-
-                        <div class="player-number">
-                            02
-                        </div>
-
-                        <div>
-                            <strong>
-                                Защитник
-                            </strong>
-
-                            <span>
-                                Игрок появится позже
-                            </span>
-                        </div>
-
-                        <span>
-                            →
-                        </span>
-
-                    </div>
-
-
-                    <div class="player-row">
-
-                        <div class="player-number">
-                            03
-                        </div>
-
-                        <div>
-                            <strong>
-                                Полузащитник
-                            </strong>
-
-                            <span>
-                                Игрок появится позже
-                            </span>
-                        </div>
-
-                        <span>
-                            →
-                        </span>
-
-                    </div>
-
-
-                    <div class="player-row">
-
-                        <div class="player-number">
-                            04
-                        </div>
-
-                        <div>
-                            <strong>
-                                Нападающий
-                            </strong>
-
-                            <span>
-                                Игрок появится позже
-                            </span>
-                        </div>
-
-                        <span>
-                            →
-                        </span>
-
-                    </div>
-
+                <div>
+                    <strong>2026/27</strong>
+                    <span>актуальный сезон</span>
                 </div>
-
             </div>
 
+            <div class="squad-filters" role="group" aria-label="Фильтр по позиции">
+                <button class="squad-filter active" type="button" data-squad-filter="all">Все</button>
+                <button class="squad-filter" type="button" data-squad-filter="goalkeeper">Вратари</button>
+                <button class="squad-filter" type="button" data-squad-filter="defender">Защитники</button>
+                <button class="squad-filter" type="button" data-squad-filter="midfielder">Полузащитники</button>
+                <button class="squad-filter" type="button" data-squad-filter="forward">Нападающие</button>
+            </div>
 
-            <div class="content-card">
+            <div id="squadStatus" class="squad-status" role="status" aria-live="polite">
+                Загрузка состава…
+            </div>
 
-                <div class="card-top">
-                    <span>
-                        ТРЕНЕРСКИЙ ШТАБ
-                    </span>
+            <div id="squadGroups" class="squad-groups"></div>
+
+        </section>
+
+
+        <!-- ИНФОРМАЦИЯ ОБ ИГРОКЕ -->
+        <section class="screen player-detail-screen" id="playerDetailScreen">
+
+            <button
+                class="back-button"
+                id="backToSquad"
+                type="button"
+            >
+                ← Назад к составу
+            </button>
+
+            <div class="player-detail-card">
+
+                <img id="detailPlayerImage" alt="" hidden>
+
+                <div class="player-detail-main">
+                    <span class="section-label" id="detailPlayerPosition">ИГРОК</span>
+
+                    <h1 id="detailPlayerName">Игрок</h1>
+
+                    <span class="detail-player-number" id="detailPlayerNumber" hidden>№ —</span>
                 </div>
 
+                <div class="player-stats">
+                    <div>
+                        <span>ДАТА РОЖДЕНИЯ</span>
+                        <strong id="detailPlayerAge">—</strong>
+                    </div>
 
-                <div class="empty-state">
+                    <div>
+                        <span>ПОЗИЦИЯ</span>
+                        <strong id="detailPlayerPositionDetail">—</strong>
+                    </div>
 
-                    <span>
-                        👔
-                    </span>
+                    <div>
+                        <span>ГРАЖДАНСТВО</span>
+                        <strong id="detailPlayerCountry">—</strong>
+                    </div>
+                </div>
 
-                    <h3>
-                        Раздел в разработке
-                    </h3>
-
-                    <p>
-                        Позже добавим реальные карточки
-                        игроков и тренеров.
+                <div class="player-about">
+                    <h3>О игроке</h3>
+                    <p id="detailPlayerAbout">
+                        Подробная биография появится после подтверждения данных источниками.
                     </p>
-
                 </div>
 
             </div>
@@ -824,29 +760,15 @@
                         ГОЛОСОВАНИЕ
                     </span>
 
-                    <span>
-                        СКОРО
+                    <span id="pollCardStatus">
+                        ЗАГРУЗКА
                     </span>
 
                 </div>
 
-
-                <h2>
-                    Кто лучший игрок матча?
-                </h2>
-
-                <p class="muted">
-                    После подключения матч-центра здесь появятся
-                    настоящие голосования.
-                </p>
-
-                <button
-                    class="secondary-button"
-                    id="voteButton"
-                    type="button"
-                >
-                    Открыть голосование
-                </button>
+                <div id="pollContainer">
+                    <p class="muted">Загружаем активные опросы…</p>
+                </div>
 
             </div>
 
@@ -867,14 +789,35 @@
                     </span>
 
                     <h3>
-                        Общение болельщиков
+                        Публикации болельщиков
                     </h3>
 
                     <p>
-                        Позже добавим обсуждения
-                        и фанатские активности.
+                        Материалы фанатов появятся после подключения безопасной публикации и модерации.
                     </p>
 
+                </div>
+
+            </div>
+
+            <div class="fan-features-grid">
+
+                <div class="content-card fan-feature-card">
+                    <div class="card-top">
+                        <span>ПРОГНОЗЫ</span>
+                        <span>СКОРО</span>
+                    </div>
+                    <h2>Прогноз на матч</h2>
+                    <p class="muted">Функция станет доступна после подключения подтверждённых матчей и серверной логики.</p>
+                </div>
+
+                <div class="content-card fan-feature-card">
+                    <div class="card-top">
+                        <span>РЕЙТИНГИ</span>
+                        <span>СКОРО</span>
+                    </div>
+                    <h2>Рейтинги игроков</h2>
+                    <p class="muted">Показывать оценки без реального источника данных нельзя.</p>
                 </div>
 
             </div>
@@ -919,7 +862,7 @@
 
         <button
             class="nav-item"
-            data-screen="newsScreen"
+            data-screen="mediaScreen"
             type="button"
         >
             <span class="nav-icon">
@@ -927,7 +870,7 @@
             </span>
 
             <span>
-                Новости
+                LOKO MEDIA
             </span>
         </button>
 
@@ -985,7 +928,7 @@
 </div>
 
 
-<script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 </html>
