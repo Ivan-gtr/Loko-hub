@@ -1,3 +1,11 @@
 .env
 .env.*
+.env.local
 .netlify
+node_modules
+dist
+.DS_Store
+Thumbs.db
+
+# Рабочие копии аудита (не часть продукта)
+/LOKO-HUB-v1.3-2026-10-20/

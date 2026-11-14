@@ -1,2 +1,22 @@
 [build]
   functions = "netlify/functions"
+
+# Планировщик прогрева кэша матчей.
+# LIVE-обновление дополнительно происходит по запросу пользователей:
+# TTL кэша 60 с, пока идёт live-матч, и 30 минут в остальное время.
+[functions."refresh-football"]
+  schedule = "*/30 * * * *"
+
+# Планировщик LOKO MEDIA: опрос активных RSS-источников.
+[functions."refresh-content"]
+  schedule = "*/30 * * * *"
+
+# Security-заголовки
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self'"

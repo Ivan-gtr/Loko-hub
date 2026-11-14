@@ -1,0 +1,20 @@
+{
+  "name": "loko-hub",
+  "version": "1.4.0",
+  "description": "LOKO HUB — независимая фанатская платформа ФК «Локомотив» Москва",
+  "private": true,
+  "scripts": {
+    "dev": "netlify dev",
+    "dev:static": "powershell -File start-loko-hub-tcp.ps1",
+    "test": "node --test tests/"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["lokomotiv", "football", "fan-platform"],
+  "license": "UNLICENSED"
+}
